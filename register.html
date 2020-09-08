@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
+    <title>MNS Register</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href="css/register.css">
+    <link rel="stylesheet" href="css/main.css">
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">MNS</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="http://127.0.0.1:5500/homepage.html">Home<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="http://127.0.0.1:5500/register.html">Register</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="http://127.0.0.1:5500/login.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Login
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="http://127.0.0.1:5500/calendar.html">Calendar</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+</head>
+</head>
+<body>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+
+
+<div style="position: relative; top:50px;" class="container" >
+
+
+
+
+
+<div class="card bg-light">
+<article class="card-body mx-auto" style="max-width: 400px;">
+	<h4 class="card-title mt-3 text-center">Create Account</h4>
+	<p class="text-center">Get started with your free account</p>
+	<div style="text-align: center;">
+    <div id="my-signin2" style="display: inline-block; padding-top: 12px;"></div>
+    <script>
+      function onSuccess(googleUser) {
+        console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+      }
+      function onFailure(error) {
+        console.log(error);
+      }
+      function renderButton() {
+        gapi.signin2.render('my-signin2', {
+          'scope': 'profile email',
+          'width': 240,
+          'height': 50,
+          'longtitle': true,
+          'theme': 'dark',
+          'onsuccess': onSuccess,
+          'onfailure': onFailure
+        });
+      }
+    </script>
+  
+    <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+	</div>
+	<p class="divider-text">
+        <span class="bg-light">OR</span>
+    </p>
+	<form>
+	<div class="form-group input-group">
+		<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+		 </div>
+        <input name="" class="form-control" placeholder="Full name" type="text">
+    </div> <!-- form-group// -->
+    <div class="form-group input-group">
+    	<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+		 </div>
+        <input name="" class="form-control" placeholder="Email address" type="email">
+    </div> <!-- form-group// -->
+    <div class="form-group input-group">
+    	<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
+		</div>
+		<select class="custom-select" style="max-width: 120px;">
+		    <option selected="">+971</option>
+		    <option value="1">+972</option>
+		    <option value="2">+198</option>
+		    <option value="3">+701</option>
+		</select>
+    	<input name="" class="form-control" placeholder="Phone number" type="text">
+    </div> <!-- form-group// -->
+    <div class="form-group input-group">
+    	<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-building"></i> </span>
+		</div>
+		<select class="form-control">
+			<option selected=""> Select account type</option>
+			<option>Hospital</option>
+			<option>ECU Nursing</option>
+			<option>Oncology Nursing</option>
+		</select>
+	</div> <!-- form-group end.// -->
+    <div class="form-group input-group">
+    	<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+		</div>
+        <input class="form-control" placeholder="Create password" type="password">
+    </div> <!-- form-group// -->
+    <div class="form-group input-group">
+    	<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+		</div>
+        <input class="form-control" placeholder="Repeat password" type="password">
+    </div> <!-- form-group// -->                                      
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary btn-block"> Create Account  </button>
+    </div> <!-- form-group// -->      
+    <p class="text-center">Have an account? <a href="http://127.0.0.1:5500/login.html">Log In</a> </p>                                                                 
+</form>
+</article>
+</div> <!-- card.// -->
+
+</div> 
+<!--container end.//-->
+
+<br><br>
+<div class="footer">
+  <p id="welp">Chicago, Illinois, United States <br> © 2020 Copyright: MidwestNurseStaffing.com
+  </p>
+</div>
+</body>
+</html>
